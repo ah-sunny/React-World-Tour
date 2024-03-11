@@ -1,0 +1,23 @@
+.country {
+    border: 2px solid aqua;
+    border-radius: 20px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    /* width: auto; */
+}
+
+.bottomSide {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.size {
+    width: 350px;
+    height: 180px;
+}
