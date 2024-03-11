@@ -10,6 +10,7 @@
 .bottomSide {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .buttonDiv {
@@ -20,4 +21,9 @@
 .size {
     width: 350px;
     height: 180px;
+}
+
+.visitedStyle {
+    background-color: green;
+    color: black;
 }
