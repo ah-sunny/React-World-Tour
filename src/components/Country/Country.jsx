@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './country.css';
 
 
-const Country = ({ country,handleMarkvisited,handleMarkedFlag }) => {
+const Country = ({ country,handleMarkedFlag,handleMarkvisited,handleTest }) => {
     // console.log(country)
 // console.log(handleMarkvisited)
     const { name, flags, capital, area,cca3 } = country;
@@ -25,6 +25,7 @@ const Country = ({ country,handleMarkvisited,handleMarkedFlag }) => {
             <div className='bottomSide'>
                 <button onClick={()=>handleMarkvisited(country)} >Marked visited</button>
                  <button onClick={()=> handleMarkedFlag(country)}>Add flag</button>
+                 <button onClick={()=>handleTest(country)}>add test</button>
             </div>
             <div className='buttonDiv'>
                 <button style={{backgroundColor : visited ? '#747bff' : ''}} onClick={handleVisit}>{visited ? 'visited' : 'going'}</button>

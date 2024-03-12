@@ -6,6 +6,7 @@ const Countries = () => {
     const [countries, setCountry] = useState([]);
     const [markVisited, setMarkedCountry] = useState([]);
     const [markFlag , setMarkedFlag] = useState([]);
+    const [addCountries, SetAddCountry]= useState([]);
 
     const handleMarkvisited = (markedCountryProps) => {
         const newMarkedCountry = [...markVisited, markedCountryProps];
@@ -16,6 +17,12 @@ const Countries = () => {
         const newMarkedFlag = [...markFlag,flagProps];
         setMarkedFlag(newMarkedFlag);
 
+    }
+
+    const handleTest = (test)=>{
+        const newAddCountry = [...addCountries, test];
+        SetAddCountry(newAddCountry);
+        //console.log('connected')
     }
 
 
@@ -41,13 +48,20 @@ const Countries = () => {
                         markFlag.map(giveCountry => <img key={giveCountry.cca3} src={giveCountry.flags.png} />)
                     }
                 </div>
+                {/*add test  */}
+                <div>
+                    {
+                        addCountries.map(add=><li key={add.cca3} >{add.name.official}</li>)
+                    }
+
+                </div>
             </div>
 
             {/* load data */}
             <div className="countries">
                 {
                     countries.map(country => <Country key={country.cca3} handleMarkvisited={handleMarkvisited}
-                        handleMarkedFlag={handleMarkedFlag}
+                        handleMarkedFlag={handleMarkedFlag} handleTest={handleTest}
                          country={country}></Country>)
                 }
             </div>
